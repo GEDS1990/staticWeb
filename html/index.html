@@ -11,6 +11,7 @@
 
 <!-- CSS Files -->
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-table.css" rel="stylesheet" media="screen">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
 <link href="css/animate.css" rel="stylesheet" media="screen">
@@ -49,7 +50,7 @@
 
 					<!-- /.main title -->
 						<h1 class="wow fadeInLeft">
-						金点子共享平台
+						金点子资金共享平台
 						</h1>
 
 					<!-- /.header paragraph -->
@@ -60,15 +61,15 @@
 					<!-- /.header button -->
 					<div class="head-btn wow fadeInLeft">
 						<a href="#feature" class="btn-primary">投资</a>
-						<a href="#download" class="btn-default">放贷</a>
+						<a href="#download" class="btn-default">贷款</a>
 					</div>
 	
 		  
 
 				</div>
-				<div class="col-md-5" id="userinfo" style="font-weight:bold;color:#2aabd2;display: none;">
+				<!--<div class="col-md-5" id="userinfo" style="font-weight:bold;color:#2aabd2;display: none;">
 欢迎您
-				</div>
+				</div>-->
 				<!-- /.signup form -->
 				<div class="col-md-5" id="signup">
 				
@@ -86,7 +87,7 @@
 							<div class="form-group last">
 								<input type="button" id="loginButton" class="btn btn-warning btn-block btn-lg" value="登录">
 							</div>
-							<p class="privacy text-center">如果没有账号. 请点击这里 <a href="privacy.html">注册</a>.</p>
+							<p class="privacy text-center">如果没有账号. 请点击这里 <a href="register.html">注册</a>.</p>
 						</form>
 					</div>				
 				
@@ -96,7 +97,8 @@
 	</div> 
 </div>
  
-<!-- NAVIGATION -->
+
+
 <div id="menu">
 	<nav class="navbar-wrapper navbar-default" role="navigation">
 		<div class="container">
@@ -111,14 +113,27 @@
 			  </div>
 	 
 			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
-				<ul class="nav navbar-nav">
-					<li><a href="#intro">主页</a></li>
-					<li><a href="#feature">投资</a></li>
-					<li><a href="#download">贷款</a></li>
-					<li id="geren" style="display:none;"><a href="#package">个人中心</a></li>
-					<li><a href="#testi">热门项目</a></li>
-					<li><a href="#contact">联系我们</a></li>
-				</ul>
+
+				  <!-- NAVIGATION -->
+				  <ul class="nav navbar-nav">
+					  <li><a href="#intro">主页</a></li>
+					  <li><a href="#feature">投资</a></li>
+					  <li><a href="#download">贷款</a></li>
+					  <li id="geren" class="dropdown" style="display: none">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							  个人中心 <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+							  <li><a href="#"  id="userinfo" >欢迎:</a></li>
+							  <li><a href="#gerenzhongxin">我的记录</a></li>
+							  <li><a href="#addlend">发布贷款信息</a></li>
+							  <li><a href="#addloan">发布放贷信息</a></li>
+							  <li><a href="#" id="exitBtn">退出</a></li>
+						  </ul>
+					  </li>
+					  <li><a href="#testi">热门项目</a></li>
+					  <li><a href="#contact">联系我们</a></li>
+				  </ul>
 			  </div>
 		</div>
 	</nav>
@@ -136,11 +151,12 @@
 			
 			<!-- /.intro content -->
 			<div class="col-md-6 wow slideInRight">
-				<h2>Optimize performance through advanced targeting solutions</h2>
-				<p>Good marketing makes the company look smart. <a href="#">Great marketing</a> makes the customer feel smart, - Joe Chernov. Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has, - Margaret Mead. The best way to predict the future is to create it, - Peter Drucker.
+				<h2>一个关于自主理财的网站</h2>
+				<p>P2P理财就是通过互联网理财，即个人对个人，又称点对点网络借贷 ，是指以公司为中介机构，把借贷双方对接起来实现各自的借贷需求。借款方可以是无抵押贷款或是有抵押贷款，而中介一般是收取双方或单方的手续费为盈利目的或者是赚取一定息差为盈利目的的新型理财模式。
+					P2P直接将人们联系起来，让人们通过互联网直接交互。使得网络上的沟通变得容易、更直接共享和交互，真正消除中间商，为企业与个人提供更大的方便。
 				</p>
 
-					<div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
+					<div class="btn-section"><a href="#feature" class="btn-default">加入</a></div>
 		
 			</div>
 		</div>			  
@@ -154,16 +170,35 @@
 			<div class="col-md-10 col-md-offset-1 col-sm-12 text-center feature-title">
 
 			<!-- /.feature title -->
-				<h2>Recreate your ideas and gain more success</h2>
-				<p>Increase your user loyalty by maintaining mutual communication and nurturing your online community.</p>
+				<h2>发布自己的计划</h2>
+				<p>这里展现了小伙伴们的招投计划及项目汇报方案，你可以直接将资金投资给他们。或者你也可以发布自己的招投计划</p>
+				<p>资金来往完全走支付宝、微信。平台只提供服务。安全有保障。</p>
 			</div>
 		</div>
 		<div class="row row-feat">
 			<div class="col-md-4 text-center">
-			
+
 			<!-- /.feature image -->
 				<div class="feature-img">
-					<img src="images/feature-image.jpg" alt="image" class="img-responsive wow fadeInLeft">
+					<div class="inner">
+						<h4>投资给平台</h4>
+						<p>
+						<div class="form-group">
+							<input class="form-control input-lg" name="MERGE0" id="tz_money" type="money" placeholder="金额(元):" required>
+						</div>
+						</p>
+						<p>
+						<div class="form-group">
+							<input class="form-control input-lg" name="MERGE0" id="tz_time" type="date" placeholder="期限:" required>
+						</div>
+						</p>
+						<p>
+						<div class="form-group">
+							<input class="form-control input-lg" name="MERGE0" id="tz_shouyi" type="" placeholder="预期收益:" readonly>
+						</div>
+						</p>
+						<div class="btn-section"><a href="#" class="btn-secondary">确认投资</a></div>
+					</div>
 				</div>
 			</div>
 		
@@ -173,9 +208,10 @@
 				<div class="col-sm-6 feat-list">
 					<i class="pe-7s-notebook pe-5x pe-va wow fadeInUp"></i>
 					<div class="inner">
-						<h4>Marketing Strategy</h4>
-						<p>Good marketing makes the company look smart. Great marketing makes the customer feel smart.
+						<h4>笔记本贷款</h4>
+						<p>哥们最近想入手一台笔记本，想贷款10000元，大概6个月后还；到期愿意连本带息还10500元。
 						</p>
+						<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
 					</div>
 				</div>
 			
@@ -183,8 +219,9 @@
 				<div class="col-sm-6 feat-list">
 					<i class="pe-7s-cash pe-5x pe-va wow fadeInUp" data-wow-delay="0.2s"></i>
 					<div class="inner">
-						<h4>App Monetization</h4>
+						<h4>资金周转2万</h4>
 						<p>Content builds relationships. Relationships are built on trust. Trust drives revenue. - Andrew Davis</p>
+						<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
 					</div>
 				</div>
 			
@@ -192,8 +229,9 @@
 				<div class="col-sm-6 feat-list">
 					<i class="pe-7s-cart pe-5x pe-va wow fadeInUp" data-wow-delay="0.4s"></i>
 					<div class="inner">
-						<h4>Store Optimization</h4>
+						<h4>资金周转3万</h4>
 						<p>Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has.</p>
+						<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
 					</div>
 				</div>
 			
@@ -201,8 +239,9 @@
 				<div class="col-sm-6 feat-list">
 					<i class="pe-7s-users pe-5x pe-va wow fadeInUp" data-wow-delay="0.6s"></i>
 					<div class="inner">
-						<h4>User Management</h4>
+						<h4>资金周转3万</h4>
 						<p>Instead of using technology to automate processes, think about using technology to enhance human interaction.</p>
+						<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
 					</div>
 				</div>
 			</div>
@@ -240,24 +279,84 @@
 	<div class="action fullscreen parallax" style="background-image:url('images/bg.jpg');" data-img-width="2000" data-img-height="1333" data-diff="100">
 		<div class="overlay">
 			<div class="container">
-				<div class="col-md-8 col-md-offset-2 col-sm-12 text-center">
-				
-					<!-- /.download title -->
-					<h2 class="wow fadeInRight">Would like to know more?</h2>
-					<p class="download-text wow fadeInLeft">We'll research the market, identify the right target audience, analyze competitors and avoid users churn to increase retention. Download now for free and join with thousands happy clients.</p>
-					
-					<!-- /.download button -->
-						<div class="download-cta wow fadeInLeft">
-							<a href="#contact" class="btn-secondary">Get Connected</a>
+				<div class="row row-feat">
+					<div class="col-md-4 text-center">
+
+						<!-- /.feature image -->
+						<div class="feature-img">
+							<div class="inner">
+								<h4>获取平台投资</h4>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="tz_money" type="money" placeholder="金额(元):" required>
+								</div>
+								</p>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="tz_time" type="date" placeholder="借贷期限:" required>
+								</div>
+								</p>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="tz_shouyi" type="" placeholder=预期利息:" readonly>
+								</div>
+								</p>
+								<div class="btn-section"><a href="#" class="btn-secondary">确认借贷</a></div>
+							</div>
 						</div>
-				</div>	
+					</div>
+
+					<div class="col-md-8">
+
+						<!-- /.feature 1 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-notebook pe-5x pe-va wow fadeInUp"></i>
+							<div class="inner">
+								<h4>笔记本贷款</h4>
+								<p>哥们最近想入手一台笔记本，想贷款10000元，大概6个月后还；到期愿意连本带息还10500元。
+								</p>
+								<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 2 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-cash pe-5x pe-va wow fadeInUp" data-wow-delay="0.2s"></i>
+							<div class="inner">
+								<h4>资金周转2万</h4>
+								<p>Content builds relationships. Relationships are built on trust. Trust drives revenue. - Andrew Davis</p>
+								<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 3 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-cart pe-5x pe-va wow fadeInUp" data-wow-delay="0.4s"></i>
+							<div class="inner">
+								<h4>资金周转3万</h4>
+								<p>Never doubt a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has.</p>
+								<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 4 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-users pe-5x pe-va wow fadeInUp" data-wow-delay="0.6s"></i>
+							<div class="inner">
+								<h4>资金周转3万</h4><div class="btn-section">
+								<p>Instead of using technology to automate processes, think about using technology to enhance human interaction.</p>
+								<a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>	
 		</div>
 	</div>
 </div>
 <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >ÍøÒ³Ä£°å</a></div>
 <!-- /.pricing section -->
-<div id="package">
+<div id="gerenzhongxin" style="display: none;">
 	<div class="container">
 		<div class="text-center">
 		
@@ -268,96 +367,102 @@
 		<div class="row package-option">
 
 			<!-- /.package 1 -->
-			<div class="col-xs-11">
-			  <div class="price-box wow fadeInUp">
-			   <div class="price-heading text-center">
-			   
-			   <!-- /.package icon -->
-					<i class="pe-7s-coffee pe-5x"></i>
-					
-					<!-- /.package name -->
-					<h3>贷款/放贷记录</h3>
-			   </div>
-			   
-			   <!-- /.price -->
-				<div class="price-group text-left">
-					<span class="label label-info">放贷</span>
+			<!--<div class="col-xs-11">
+				<div id="dateSearch">
+					<span><strong>开始日期: </strong></span>
+					<input type="text" class="laydate-icon startDate"  placeholder="开始日期">
+                    </br>
+					<span><strong>结束日期: </strong></span>
+					<input type="text" class="laydate-icon endDate"  placeholder="结束日期">
+					&lt;!&ndash;<span><strong>贷款号: </strong></span>
+					<input type="text" class="default-input form-control imuserid"   placeholder="请输入用户id">&ndash;&gt;
+					<button type="button" class="btn btn btn-info search"> <i class="fa fa-search"></i> 搜索</button>
 				</div>
-			
-				<!-- /.package features -->
-			   <ul class="price-feature text-left">
-				  <li>
-					  <td>
-						  放贷号
-					  </td>
-					  <td>
-						  <strong>放贷名称</strong>
-					  </td>
-					  <td>
-						  描述
-					  </td>
-					  <td>
-						  利息
-					  </td>
-					  <td>
-						  <a class="btn btn-default" href="#">详情</a>
-					  </td>
-				  </li>
-			   </ul>
+				<div class="row" id="infoArea">
+					<div class="col-sm-12" style="padding: 0 10px;">
+						<ul class="nav nav-tabs" id="navList">
+							&lt;!&ndash;<li data-name = "loginLogTab" class="active"><a data-toggle="tab" href="#loginLogTab"><i class="fa fa-user"></i>登录信息</a> </li>
+							<li data-name = "receiveLogTab" class=""><a data-toggle="tab" href="#receiveLogTab"><i class="fa fa-briefcase"></i> 订购信息</a> </li>&ndash;&gt;
+							<li data-name = "socketInputTab" class=""><a data-toggle="tab" href="#socketInputTab"><i class="fa fa-briefcase"></i> 贷款记录</a> </li>
+							<li data-name = "socketOutputTab" class=""><a data-toggle="tab" href="#socketOutputTab"><i class="fa fa-briefcase"></i> 放贷记录</a> </li>
+						</ul>
+						<div class="tab-content" id="tabContent">
+							<div id="toolbar" class="btn-group">
+								<button id="btn_add" type="button" class="btn btn-info btn-sm rightSize">
+									<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>新增
+								</button>
+								<button id="btn_edit" type="button" class="btn btn-info btn-sm rightSize">
+									<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>修改
+								</button>
+								<button id="btn_delete" type="button" class="btn btn-info btn-sm rightSize">
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>删除
+								</button>
+							</div>
+							&lt;!&ndash;<div id="loginLogTab" class="tab-pane active">
+								<div class="table-responsive">
+									<table id="loginLog-table"></table>
+								</div>
+							</div>
+							<div id="receiveLogTab" class="tab-pane">
+								<div class="table-responsive">
+									<table id="receiveLog-table"></table>
+								</div>
+							</div>&ndash;&gt;
+							<div id="socketInputTab" class="tab-pane">
+								<div class="table-responsive">
+									<table id="sockctInput-table">socketInputTab</table>
+								</div>
+							</div>
+							<div id="socketOutputTab" class="tab-pane">
+								<div class="table-responsive">
+									<table id="sockctOutput-table">socketOutputTab</table>
+								</div>
+							</div>
+						</div>
 
-				  <!-- /.price -->
-				  <div class="price-group text-left">
-					  <span class="label label-info">贷款</span>
-				  </div>
-
-				  <!-- /.package features -->
-				  <ul class="price-feature text-left">
-					  <li>
-							  <td>
-								  贷款号
-							  </td>
-							  <td>
-								  <strong>贷款名称</strong>
-							  </td>
-							  <td>
-								  描述
-							  </td>
-							  <td>
-								  利息
-							  </td>
-							  <td>
-								  <a class="btn btn-default" href="#">详情</a>
-							  </td>
-						</li>
-				  </ul>
-
-
-			  </div>
+					</div>
+				</div>
+			</div>-->
+			<div id="loanRecord" class="table-responsive">
+				<table id="loanRecordTable" class="table">
+					<caption>我的贷款记录</caption>
+					<thead>
+					<tr>
+						<th data-field="loanCode">贷款号</th>
+						<th data-field="loanName">贷款名称</th>
+						<th data-field="loanTime">贷款时间</th>
+						<th data-field="loanDesc">贷款描述</th>
+						<th data-field="loanInterest">利息</th>
+						<th data-field="loanInterestType">利息类型</th>
+					</tr>
+					</thead>
+				</table>
 			</div>
+			<div id="lendRecord" class="table-responsive">
+				<table id="lendRecordTable" class="table">
+					<caption>我的放贷记录</caption>
+					<thead>
+					<tr>
+						<th data-field="lendCode">放贷号</th>
+						<th data-field="lendName">放贷名称</th>
 
+						<th data-field="lendTime">放贷时间</th>
+						<th data-field="lendDesc">放贷描述</th>
+						<th data-field="lendInterest">利息</th>
+						<th data-field="lendInterestType">利息类型</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
 		</div>
 	</div>
-</div>
-
-<!-- /.client section -->
-<div id="client"> 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 text-center">
-					<img alt="client" src="images/company.jpg" class="wow fadeInUp">
-					<img alt="client" src="images/company.jpg" class="wow fadeInUp" data-wow-delay="0.2s">
-					<img alt="client" src="images/company.jpg" class="wow fadeInUp" data-wow-delay="0.4s">
-					<img alt="client" src="images/company.jpg" class="wow fadeInUp" data-wow-delay="0.6s">
-				</div>
-			</div>
-		</div>	
 </div>
 
 <!-- /.testimonial section -->
 <div id="testi">
 	<div class="container">
 		<div class="text-center">
-			<h2 class="wow fadeInLeft">TESTIMONIALS</h2>
+			<h2 class="wow fadeInLeft">好投机</h2>
 			<div class="title-line wow fadeInRight"></div>
 		</div>
 		<div class="row">
@@ -366,64 +471,47 @@
 				 
 					<!-- /.testimonial 1 -->
 					<div class="testi-item">
-						<div class="client-pic text-center">
-						
-							<!-- /.client photo -->
-							<img src="images/client.jpg" alt="client">
-						</div>
-						<div class="box">
-						
-							<!-- /.testimonial content -->
-							<p class="message text-center">"We are very happy and satisfied with Backyard service. Our account manager is efficient and very knowledgeable. It was able to create a vast fan base within very short period of time. We would highly recommend Backyard App to anyone."</p>
-						</div>
 						<div class="client-info text-center">
-						
-						<!-- /.client name -->
-							Jennifer Lopez, <span class="company">Microsoft</span>	
+							<img src="images/licai1.jpg" alt="licai3.jpg">
+<!--							Jennifer Lopez, <span class="company">Microsoft</span>	-->
 						</div>
 					</div>		
 					
 					<!-- /.testimonial 2 -->
 					<div class="testi-item">
-						<div class="client-pic text-center">
-
-							<!-- /.client photo -->
-							<img src="images/client.jpg" alt="client">
-						</div>
-						<div class="box">
-
-							<!-- /.testimonial content -->
-							<p class="message text-center">"Everything looks great... Thanks for the quick revision turn around. We were lucky to find you guys and will definitely be using some of your other services in the near future."</p>
-						</div>
 						<div class="client-info text-center">
 
-							<!-- /.client name -->
-							Mike Portnoy, <span class="company">Dream Theater</span>	
+							<img src="images/licai2.jpg" alt="licai3.jpg">
 						</div>
+
 					</div>				
 					
 					<!-- /.testimonial 3 -->
 					<div class="testi-item">
-						<div class="client-pic text-center">
-
-							<!-- /.client photo -->
-							<img src="images/client.jpg" alt="client">
-						</div>
-						<div class="box">
-
-							<!-- /.testimonial content -->
-							<p class="message text-center">"Overall, the two reports were very clear and helpful so thank you for the suggestion to do the focus group. We are currently working with our developer to implement some of these suggestions."</p>
-						</div>
 						<div class="client-info text-center">
-
-							<!-- /.client name -->
-							Jennifer Love Hewitt, <span class="company">Lead Vocal</span>	
+							<img src="images/licai3.jpg" alt="licai3.jpg">
 						</div>
+
 					</div>			
 				 
 				</div>
 			</div>	
-		</div>	
+		</div>
+
+		<!-- /.client section -->
+		<div id="client">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-24 text-center">
+						<img alt="client" src="images/dingqi1.png" onclick="alert('投资')" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi2.png" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi3.png" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi4.png" class="img-rounded wow col-xs-offset-12">
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 
@@ -436,17 +524,16 @@
 				
 					<!-- /.address and contact -->
 					<div class="col-sm-5 contact-left wow fadeInUp">
-						<h2><span class="highlight">Get</span> in touch</h2>
+						<h2><span class="highlight">联系</span> 我们</h2>
 							<ul class="ul-address">
-							<li><i class="pe-7s-map-marker"></i>1600 Amphitheatre Parkway, Mountain View</br>
-							California 55000
+							<li><i class="pe-7s-map-marker"></i>江苏省</br>
+								苏州市昆山市开发区
 							</li>
-							<li><i class="pe-7s-phone"></i>+1 (123) 456-7890</br>
-							+2 (123) 456-7890
+							<li><i class="pe-7s-phone"></i>+86 15850358189
 							</li>
-							<li><i class="pe-7s-mail"></i><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li><i class="pe-7s-look"></i><a href="#">www.yoursite.com</a></li>
-							</ul>	
+							<li><i class="pe-7s-mail"></i><a href="mailto:15850358189@163.com">15850358189@163.com</a></li>
+							<li><i class="pe-7s-look"></i><a href="#">www.haveideal.club</a></li>
+							</ul>
 								
 					</div>
 					
@@ -454,16 +541,16 @@
 					<div class="col-sm-7 contact-right">
 						<form method="POST" id="contact-form" class="form-horizontal" action="contactengine.php" onSubmit="alert('Thank you for your feedback!');">
 							<div class="form-group">
-							<input type="text" name="Name" id="Name" class="form-control wow fadeInUp" placeholder="Name" required/>
+							<input type="text" name="Name" id="Name" class="form-control wow fadeInUp" placeholder="姓名" required/>
 							</div>
 							<div class="form-group">
-							<input type="text" name="Email" id="Email" class="form-control wow fadeInUp" placeholder="Email" required/>
+							<input type="text" name="Email" id="Email" class="form-control wow fadeInUp" placeholder="邮箱" required/>
 							</div>					
 							<div class="form-group">
-							<textarea name="Message" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp"  placeholder="Message" required></textarea>
+							<textarea name="Message" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp"  placeholder="您的建议" required></textarea>
 							</div>
 							<div class="form-group">
-							<input type="submit" name="submit" value="Submit" class="btn btn-success wow fadeInUp" />
+							<input type="submit" name="submit" value="提交" class="btn btn-success wow fadeInUp" />
 							</div>
 						</form>		
 					</div>
@@ -495,7 +582,10 @@
 	<!-- /.javascript files -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/index.js"></script>
     <script src="js/jquery.sticky.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
