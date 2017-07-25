@@ -10,7 +10,7 @@ $("#loginButton").click(function(){
         "password": password
     });
     jQuery.ajax({
-        url: "http://182.254.216.232/restControl/login",
+        url: "http://www.haveideal.club/restControl/login",
         type: "post",
         data: json,
         contentType: "application/json; charset=utf-8",
@@ -57,7 +57,7 @@ $("#registerButton").click(function(){
     });
     //"{\"username\":\"geds\",\"id\":1001,\"tel\":\"1234567\",\"password\":\"123\"}"
     jQuery.ajax({
-        url:"http://182.254.216.232/restControl/register",
+        url:"http://www.haveideal.club/restControl/register",
         type:"post",
         data:json,
         contentType: "application/json; charset=utf-8",
@@ -105,7 +105,7 @@ if(!$("html").hasClass("touch")){
 /*初始化table数据*/
 $(function(){
     jQuery.ajax({
-        url:"http://182.254.216.232/restControl/queryLoans",
+        url:"http://www.haveideal.club/restControl/queryLoans",
         type:"post",
         data:"param",
         contentType: "application/json; charset=utf-8",
@@ -126,7 +126,7 @@ $(function(){
     });
 
     jQuery.ajax({
-        url:"http://182.254.216.232/restControl/queryLends",
+        url:"http://www.haveideal.club/restControl/queryLends",
         type:"post",
         data:"param",
         contentType: "application/json; charset=utf-8",
