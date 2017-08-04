@@ -148,6 +148,6 @@ $('#exitBtn').click(function(){
     var storage = window.sessionStorage;
     storage.clear();
 });
-$('#iosBtn').click(function () {
+function iosClick() {
     alert('敬请期待');
-});
+}
