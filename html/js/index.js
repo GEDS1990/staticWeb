@@ -104,10 +104,16 @@ if(!$("html").hasClass("touch")){
  bootstrap table*/
 /*初始化table数据*/
 $(function(){
+    var storage = window.sessionStorage;
+    var username = storage["username"];
+    var json = JSON.stringify({
+        "loanName": "",
+        "loanPersonId": username
+    });
     jQuery.ajax({
         url:"http://www.haveideal.club/restControl/queryLoans",
         type:"post",
-        data:"param",
+        data:json,
         contentType: "application/json; charset=utf-8",
         success:function(data){
             $("#loanRecordTable").bootstrapTable({
@@ -115,7 +121,7 @@ $(function(){
             });
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("something is wrong!");
+            alert("服务器繁忙，请稍后重试!");
             // alert(XMLHttpRequest.status);
             // alert(XMLHttpRequest.readyState);
             // alert(textStatus);
@@ -136,7 +142,7 @@ $(function(){
             });
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("something is wrong!");
+            alert("服务器繁忙，请稍后重试!");
         },
         complete: function(XMLHttpRequest, textStatus) {
             this; // 调用本次AJAX请求时传递的options参数
@@ -151,3 +157,18 @@ $('#exitBtn').click(function(){
 function iosClick() {
     alert('敬请期待');
 }
+/*$(function () {
+   $("[data-toggle='popover']").popover();
+});*/
+
+$('#qrtzBtn').popover({
+    trigger : 'hover',//鼠标以上时触发弹出提示框
+    html:true,//开启html 为true的话，data-content里就能放html代码了
+    content:"<img src='/images/weixin/0.1.png'>"
+});
+
+$('#qrjdBtn').popover({
+    trigger : 'hover',//鼠标以上时触发弹出提示框
+    html:true,//开启html 为true的话，data-content里就能放html代码了
+    content:"<img src='/images/weixin/0.1.png'>"
+});
