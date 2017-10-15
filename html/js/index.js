@@ -1,8 +1,18 @@
-/**
+
+    <!-- 百度统计 -->
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d117cfec38387885bfd83e9662c63931";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    /**
  * Created by Administrator on 2017/7/5 0005.
  */
 
 $("#loginButton").click(function(){
+    debugger;
     var username = $("#in_username")[0].value;
     var password = $("#in_password")[0].value;
     var json = JSON.stringify({
@@ -27,6 +37,7 @@ $("#loginButton").click(function(){
                 // $("#userinfo")[0].style.display="";
                 $("#geren")[0].style.display="";
                 $("#gerenzhongxin")[0].style.display="";
+                window.open ('index.html')
             }else if(msg=="1"){
                 alert("用户名或密码不正确！");
             }
@@ -161,10 +172,25 @@ function iosClick() {
    $("[data-toggle='popover']").popover();
 });*/
 
+$('#gttzBtn').popover({
+    trigger : 'hover',//鼠标以上时触发弹出提示框
+    html:true,//开启html 为true的话，data-content里就能放html代码了
+    content:"<img src='/images/zhifubao/xbdq.png'>"
+});
+
 $('#qrtzBtn').popover({
     trigger : 'hover',//鼠标以上时触发弹出提示框
     html:true,//开启html 为true的话，data-content里就能放html代码了
     content:"<img src='/images/weixin/0.1.png'>"
+});
+
+$('#qrtzBtn').click(function() {
+    var username = $("#in_username")[0].value;
+    var password = $("#in_password")[0].value;
+    var json = JSON.stringify({
+        "username": username,
+        "password": password
+    });
 });
 
 $('#qrjdBtn').popover({
