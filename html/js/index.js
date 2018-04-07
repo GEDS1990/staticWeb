@@ -3,7 +3,8 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?d117cfec38387885bfd83e9662c63931";
+//      hm.src = "https://hm.baidu.com/hm.js?d117cfec38387885bfd83e9662c63931";
+      hm.src = "https://hm.baidu.com/hm.js?05c28c4dd8bc08e88d24c1d38e39497b";
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
@@ -43,9 +44,9 @@ $("#loginButton").click(function(){
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+//            alert(XMLHttpRequest.status);
+//            alert(XMLHttpRequest.readyState);
+//            alert(textStatus);
         },
         complete: function(XMLHttpRequest, textStatus) {
             this; // 调用本次AJAX请求时传递的options参数
@@ -82,9 +83,9 @@ $("#registerButton").click(function(){
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert(XMLHttpRequest.status);
-            alert(XMLHttpRequest.readyState);
-            alert(textStatus);
+//            alert(XMLHttpRequest.status);
+//            alert(XMLHttpRequest.readyState);
+//            alert(textStatus);
         },
         complete: function(XMLHttpRequest, textStatus) {
             this; // 调用本次AJAX请求时传递的options参数
@@ -132,7 +133,7 @@ $(function(){
             });
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("服务器繁忙，请稍后重试!");
+//            alert("服务器繁忙，请稍后重试!");
             // alert(XMLHttpRequest.status);
             // alert(XMLHttpRequest.readyState);
             // alert(textStatus);
@@ -153,7 +154,7 @@ $(function(){
             });
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            alert("服务器繁忙，请稍后重试!");
+//            alert("服务器繁忙，请稍后重试!");
         },
         complete: function(XMLHttpRequest, textStatus) {
             this; // 调用本次AJAX请求时传递的options参数

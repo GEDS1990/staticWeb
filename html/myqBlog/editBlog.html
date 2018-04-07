@@ -9,16 +9,28 @@
 
     <!-- CSS Files -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="css/blog.css" rel="stylesheet" type="text/css" />
+    <link href="../css/animate.css" rel="stylesheet" media="screen">
+
+    <link href="css/blogEdit.css" rel="stylesheet" type="text/css" />
     <link href="css/editormd.css" rel="stylesheet" type="text/css" />
+
     <!-- Google Fonts -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+
 
 </head>
 <body>
 
 <div id="tmeplatemo_container">
     <div id="templatemo_header_01">
+        <button id="fabiaoBtn" class="btn btn-danger">
+            <span class="glyphicon glyphicon-check"></span>
+            发表博客
+        </button>
+        <button id="cancleBtn" class="btn btn-warning">
+            <span class="glyphicon glyphicon-check"></span>
+            取消
+        </button>
     </div>	<!-- end of header -->
 
     <div id="tmeplatemo_content">
@@ -26,12 +38,46 @@
         <div id="templatemo_main_column">
         	
             <div class="header_01">
-                <input class="form-control input-lg" name="title" id="fb_money" type="title" placeholder="--请输入博客标题" required>
+                <input class="form-control input-lg" name="title" id="blogTitle" type="title" placeholder="--请输入博客标题" required>
             </div>
 
             <!--编辑器-->
             <div id="editormd">
-                <textarea style="display:none;" id="ts"></textarea>
+                <textarea style="display:none;" id="context">
+[TOC]
+
+#### Disabled options
+
+- TeX (Based on KaTeX);
+- Emoji;
+- Task lists;
+- HTML tags decode;
+- Flowchart and Sequence Diagram;
+
+#### Editor.md directory
+
+	editor.md/
+            lib/
+            css/
+            scss/
+            tests/
+            fonts/
+            images/
+            plugins/
+            examples/
+            languages/
+            editormd.js
+            。。。
+
+```
+                    <!-- English -->
+<script src="../dist/js/languages/en.js"></script>
+
+                    <!-- 繁體中文 -->
+<script src="../dist/js/languages/zh-tw.js"></script>
+```
+
+                </textarea>
             </div>
         </div>
     	
@@ -40,7 +86,7 @@
     
     <div id="templatemo_footer">
     
-		Copyright © 2015 <a href="#">牧羊犬Code</a> | 推荐产品 <a href="http://www.haveideal.club" target="_blank">长兴金融</a>
+		Copyright © 2015 <a href="#">牧羊犬Code</a> | 推荐产品 <a href="http://www.haveideal.club" target="_blank">数智云金融</a>
         
         <div class="margin_bottom_20"></div>
         
@@ -54,6 +100,7 @@
 <script src="../js/jquery.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="js/editormd.js"></script>
+<script src="https://cdn.bootcss.com/showdown/1.3.0/showdown.min.js"></script>
 <script src="js/blog.js"></script>
 
 <script >
@@ -61,10 +108,44 @@
     var Editor;
     $(function() {
         Editor = editormd("editormd", {
-            width   : "680px",
+            width   : "980px",
             height  : 640,
             syncScrolling : "single",
             path    : "js/lib/"
+        });
+    });
+    //取消
+    $('#cancleBtn').click(function() {
+        window.location.href="index.html";
+    });
+    //发表博客
+    $('#fabiaoBtn').click(function() {
+        debugger;
+        var title = $("#blogTitle")[0].value;
+        var contentTemp = $("#context")[0].value;
+        //转换markdown转为html
+        var converter = new showdown.Converter();
+        var content = converter.makeHtml(contentTemp);
+        var json = JSON.stringify({
+            "title": title,
+            "username": "zhangsan",
+            "content":content
+        });
+        jQuery.ajax({
+            url:"http://www.haveideal.club/blogControl/addBlog",
+            type:"post",
+            data:json,
+            contentType: "application/json; charset=utf-8",
+            success:function(data){
+                alert("发表博客成功!");
+                window.location.href="index.html";
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                <!--alert("服务器繁忙，请稍后重试!");-->
+            },
+            complete: function(XMLHttpRequest, textStatus) {
+                this; // 调用本次AJAX请求时传递的options参数
+            }
         });
     });
 </script>

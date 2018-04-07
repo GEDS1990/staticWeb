@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.png" media="screen" />
+<head>
+
+<!-- /.website title -->
+<title>ABC金融-后台管理系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- CSS Files -->
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="css/bootstrap-table.css" rel="stylesheet" media="screen">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<link href="css/owl.theme.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+
+<!-- Colors -->
+<link href="css/css-index.css" rel="stylesheet" media="screen">
+<!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="css/css-index-purple.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="css/css-index-red.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="css/css-index-orange.css" rel="stylesheet" media="screen"> -->
+<!-- <link href="css/css-index-yellow.css" rel="stylesheet" media="screen"> -->
+
+<!-- Google Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+
+</head>
+  
+<body data-spy="scroll" data-target="#navbar-scroll">
+
+<!-- /.preloader -->
+<div id="preloader"></div>
+<div id="top"></div>
+
+<div id="menu">
+	<nav class="navbar-wrapper navbar-default" role="navigation">
+		<div class="container">
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand site-name" href="#top"><img src="images/logo2.png" alt="logo"></a>
+			  </div>
+
+			  <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
+
+				  <!-- NAVIGATION -->
+				  <ul class="nav navbar-nav">
+					  <li><a href="index.html">主页</a></li>
+					  <li><a href="lend.html">投资</a></li>
+					  <li><a href="loan.html">贷款</a></li>
+					  <li id="geren" class="dropdown" style="display: none">
+						  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							  个人中心 <span class="caret"></span>
+						  </a>
+						  <ul class="dropdown-menu">
+							  <li><a href="#"  id="userinfo" >欢迎:</a></li>
+							  <li><a href="#gerenzhongxin">我的记录</a></li>
+							  <li><a href="#addlend">发布贷款信息</a></li>
+							  <li><a href="#addloan">发布放贷信息</a></li>
+							  <li><a href="#" id="exitBtn">退出</a></li>
+						  </ul>
+					  </li>
+					  <li><a href="#testi">热门项目</a></li>
+					  <li><a href="#contact">联系我们</a></li>
+				  </ul>
+			  </div>
+		</div>
+	</nav>
+</div>
+
+<!-- /.download section -->
+<div id="fabujihua">
+	<div class="action fullscreen parallax" style="background-image:url('images/bg.jpg');" data-img-width="2000" data-img-height="1333" data-diff="100">
+		<div class="overlay">
+			<div class="container">
+				<div class="row row-feat">
+					<div class="col-md-4 text-center">
+
+						<!-- /.feature image -->
+						<div class="feature-img">
+							<div class="inner">
+								<h4>给平台投资</h4>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="fb_money" type="money" placeholder="金额(元):" required>
+								</div>
+								</p>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="fb_time" type="date" placeholder="借贷期限:" required>
+								</div>
+								</p>
+								<p>
+								<div class="form-group">
+									<input class="form-control input-lg" name="MERGE0" id="fb_shouyi" type="" placeholder=预期利息:" readonly>
+								</div>
+								</p>
+								<!--<div class="btn-section"><a href="#" class="btn-secondary">确认借贷</a></div>-->
+								<div id="qrtzBtn" type="button" class="btn btn-secondary" title="扫码支付"
+									 data-container="body" data-toggle="popover" data-placement="top">
+									确认投资
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-8">
+
+						<!-- /.feature 1 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-notebook pe-5x pe-va wow fadeInUp"></i>
+							<div class="inner">
+								<h4>笔记本贷款</h4>
+								<p>哥们最近想入手一台笔记本，想贷款10000元，大概6个月后还；到期愿意连本带息还10500元。</p>
+								<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 2 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-cash pe-5x pe-va wow fadeInUp" data-wow-delay="0.2s"></i>
+							<div class="inner">
+								<h4>小白定期</h4>
+								<p>由平台提供的定期小白理财产品,年利息4.80%-6.18%
+								；安全交易方式-<a href="https://item.taobao.com/item.htm?spm=686.1000925.0.0.184652d6sxmCv&id=559870812557"  target="_blank">淘宝店链接</a>。</p>
+								<div class="btn-section"><a id = "gttzBtn" href="#" class="btn">手机购买</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 3 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-cart pe-5x pe-va wow fadeInUp" data-wow-delay="0.4s"></i>
+							<div class="inner">
+								<h4>资金周转3万</h4>
+								<p>哥们最近想入手一台笔记本，想贷款10000元，大概6个月后还；到期愿意连本带息还10500元。</p>
+								<div class="btn-section"><a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+
+						<!-- /.feature 4 -->
+						<div class="col-sm-6 feat-list">
+							<i class="pe-7s-users pe-5x pe-va wow fadeInUp" data-wow-delay="0.6s"></i>
+							<div class="inner">
+								<h4>资金周转3万</h4><div class="btn-section">
+								<p>哥们最近想入手一台笔记本，想贷款10000元，大概6个月后还；到期愿意连本带息还10500元。</p>
+								<a href="#" class="btn">给他投资</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >ÍøÒ³Ä£°å</a></div>
+<!-- /.pricing section -->
+<div id="gerenzhongxin" style="display: none;">
+	<div class="container">
+		<div class="text-center">
+		
+			<!-- /.pricing title -->
+			<h2 class="wow fadeInLeft">个人中心</h2>
+			<div class="title-line wow fadeInRight"></div>
+		</div>
+		<div class="row package-option">
+
+			<div id="loanRecord" class="table-responsive">
+				<table id="loanRecordTable" class="table">
+					<caption>我的贷款记录</caption>
+					<thead>
+					<tr>
+						<th data-field="loanCode">贷款号</th>
+						<th data-field="loanName">贷款名称</th>
+						<th data-field="loanTime">贷款时间</th>
+						<th data-field="loanDesc">贷款描述</th>
+						<th data-field="loanInterest">利息</th>
+						<th data-field="loanInterestType">利息类型</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+			<div id="lendRecord" class="table-responsive">
+				<table id="lendRecordTable" class="table">
+					<caption>我的放贷记录</caption>
+					<thead>
+					<tr>
+						<th data-field="lendCode">放贷号</th>
+						<th data-field="lendName">放贷名称</th>
+
+						<th data-field="lendTime">放贷时间</th>
+						<th data-field="lendDesc">放贷描述</th>
+						<th data-field="lendInterest">利息</th>
+						<th data-field="lendInterestType">利息类型</th>
+					</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- /.testimonial section -->
+<div id="testi">
+	<div class="container">
+		<div class="text-center">
+			<h2 class="wow fadeInLeft">好投机</h2>
+			<div class="title-line wow fadeInRight"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">	
+			   <div id="owl-testi" class="owl-carousel owl-theme wow fadeInUp">
+				 
+					<!-- /.testimonial 1 -->
+					<div class="testi-item">
+						<div class="client-info text-center">
+							<a href="https://item.taobao.com/item.htm?spm=686.1000925.0.0.184652d6sxmCv&id=559870812557"><img src="images/licai1.jpg" alt="licai3.jpg"></a>
+<!--							Jennifer Lopez, <span class="company">Microsoft</span>	-->
+						</div>
+					</div>		
+					
+					<!-- /.testimonial 2 -->
+					<div class="testi-item">
+						<div class="client-info text-center">
+
+							<a href="https://item.taobao.com/item.htm?id=560025302048"><img src="images/licai2.jpg" alt="licai3.jpg"></a>
+						</div>
+
+					</div>				
+					
+					<!-- /.testimonial 3 -->
+					<div class="testi-item">
+						<div class="client-info text-center">
+							<img src="images/licai3.jpg" alt="licai3.jpg">
+						</div>
+
+					</div>			
+				 
+				</div>
+			</div>	
+		</div>
+
+		<!-- /.client section -->
+		<div id="client">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-24 text-center">
+						<img alt="client" src="images/dingqi1.png" onclick="alert('投资')" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi2.png" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi3.png" class="img-rounded wow col-xs-offset-12">
+						<img alt="client" src="images/dingqi4.png" class="img-rounded wow col-xs-offset-12">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- /.contact section -->
+<div id="contact">
+	<div class="contact fullscreen parallax" style="background-image:url('images/bg.jpg');" data-img-width="2000" data-img-height="1334" data-diff="100">
+		<div class="overlay">
+			<div class="container">
+				<div class="row contact-row">
+				
+					<!-- /.address and contact -->
+					<div class="col-sm-5 contact-left wow fadeInUp">
+						<h2><span class="highlight">联系</span> 我们</h2>
+							<ul class="ul-address">
+							<li><i class="pe-7s-map-marker"></i>江苏省</br>
+								苏州市昆山市开发区
+							</li>
+							<li><i class="pe-7s-phone"></i>+86 15850358189
+							</li>
+							<li><i class="pe-7s-mail"></i><a href="mailto:gedonshen@163.com">gedonshen@163.com</a></li>
+							<li><i class="pe-7s-look"></i><a href="#">www.haveideal.club</a></li>
+							</ul>
+								
+					</div>
+					
+					<!-- /.contact form -->
+					<div class="col-sm-7 contact-right">
+						<form method="POST" id="contact-form" class="form-horizontal" action="#" onSubmit="alert('敬请期待!');">
+							<div class="form-group">
+							<input type="text" name="Name" id="Name" class="form-control wow fadeInUp" placeholder="姓名" required/>
+							</div>
+							<div class="form-group">
+							<input type="text" name="Email" id="Email" class="form-control wow fadeInUp" placeholder="邮箱" required/>
+							</div>					
+							<div class="form-group">
+							<textarea name="Message" rows="20" cols="20" id="Message" class="form-control input-message wow fadeInUp"  placeholder="您的建议" required></textarea>
+							</div>
+							<div class="form-group">
+							<input type="submit" name="submit" value="提交" class="btn btn-success wow fadeInUp" />
+							</div>
+						</form>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+<!-- /.footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="col-sm-4 col-sm-offset-4">
+			<!-- /.social links -->
+				<div class="social text-center">
+					<ul>
+						<li><a class="wow fadeInUp" href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a class="wow fadeInUp" href="https://www.facebook.com/" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+						<li><a class="wow fadeInUp" href="https://plus.google.com/" data-wow-delay="0.4s"><i class="fa fa-google-plus"></i></a></li>
+						<li><a class="wow fadeInUp" href="https://instagram.com/" data-wow-delay="0.6s"><i class="fa fa-instagram"></i></a></li>
+					</ul>
+				</div>	
+			<div class="text-center wow fadeInUp" style="font-size: 14px;">Copyright chinaxin 2015 - 团队信息 <a href="http://www.haveideal.club/myqCode/index.html" target="_blank" title="">牧羊犬Code</a><a href="#" title="" target="_blank"></a></div>
+			<a href="#" class="scrollToTop"><i class="pe-7s-up-arrow pe-va"></i></a>
+		</div>	
+	</div>	
+</footer>
+	
+	<!-- /.javascript files -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-zh-CN.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/index.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+  </body>
+</html>
