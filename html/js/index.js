@@ -21,7 +21,7 @@ $("#loginButton").click(function(){
         "password": password
     });
     jQuery.ajax({
-        url: "http://www.haveideal.club/restControl/login",
+        url: "http://www.shzhyun.com/restControl/login",
         type: "post",
         data: json,
         contentType: "application/json; charset=utf-8",
@@ -69,7 +69,7 @@ $("#registerButton").click(function(){
     });
     //"{\"username\":\"geds\",\"id\":1001,\"tel\":\"1234567\",\"password\":\"123\"}"
     jQuery.ajax({
-        url:"http://www.haveideal.club/restControl/register",
+        url:"http://www.shzhyun.com/restControl/register",
         type:"post",
         data:json,
         contentType: "application/json; charset=utf-8",
@@ -123,7 +123,7 @@ $(function(){
         "loanPersonId": username
     });
     jQuery.ajax({
-        url:"http://www.haveideal.club/restControl/queryLoans",
+        url:"http://www.shzhyun.com/restControl/queryLoans",
         type:"post",
         data:json,
         contentType: "application/json; charset=utf-8",
@@ -144,7 +144,7 @@ $(function(){
     });
 
     jQuery.ajax({
-        url:"http://www.haveideal.club/restControl/queryLends",
+        url:"http://www.shzhyun.com/restControl/queryLends",
         type:"post",
         data:"param",
         contentType: "application/json; charset=utf-8",
